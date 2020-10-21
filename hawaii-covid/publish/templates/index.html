@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Hawaii covid report</title>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.imgbox {
+		display: grid;
+		height: 100%;            
+	}
+	.center-fit {
+		max-width: 100%;
+		max-height: 100vh;
+		margin: auto;
+		text-align: center;
+	}
+	.mystyle {
+		font-size: 11pt; 
+		font-family: Arial;
+		border-collapse: collapse; 
+		border: 1px solid silver;
+		max-width: 100%;
+		max-height: 100vh;
+		margin: auto;
+		text-align: center;
+	}
+
+	.mystyle td, th {
+		padding: 5px;
+		text-align: right;
+	}
+
+	.mystyle tr:nth-child(even) {
+		background: #E0E0E0;
+	}
+
+	.mystyle tr:hover {
+		background: silver;
+		/* cursor: pointer; */
+	}
+</style>
+</head>   
+
+<body>
+	<div class="imgbox">
+		<h1 style="text-align:center">State of Hawaii</h1>
+		<br><img class="center-fit" src="means.png" alt="7 day boxcar mean">
+		<br><p style="text-align:center">7 Day Descriptive Stats</p>
+		<br>$stats
+		<br>$recs
+		<br><p class="center-fit">Here is the data I'm using. <a href="daily.csv">daily.csv</a></p>
+		<p class="center-fit"><br>DOH made the data that they plot 
+		<a href="https://health.hawaii.gov/coronavirusdisease2019/what-you-should-know/current-situation-in-hawaii/">here</a>
+		 available on their Tableau charts.</p>
+		<br><img class="center-fit" src="population14day.png" alt="14 day total cases per 10k population"> 
+		<br><img class="center-fit" src="population7Day.png" alt="7 data total caases per 10K population">
+		<h1 style="text-align:center">Oahu</h1>
+		<br/>
+		<a href ="https://www.oneoahu.org/reopening-strategy" style="text-align:center">
+			<br><img class="center-fit" src="roStat.png" alt="Reopening Status">
+			<br><img class="center-fit" src="roTrs.png" alt="Reopening Tiers">
+		</a>
+		<br><a href="https://www.oneoahu.org/reopening-strategy" style="text-align:center">One Oahu C&C status page</a>
+		
+		<br><img class="center-fit" src="oahu_smoothed.png" alt="Oahu daily cases with smoothed average">
+		<br><img class="center-fit" src ="trend.png" alt="Oahu daily cases with 7 day mean and trend projection">
+		<p class="center-fit">The average rate over the last two weeks is $rate. I'm reasonably sure it does not have any predictive power at all.</p>
+		<br><img class="center-fit" src="rfSignal.png" alt="Rising or Falling as percent of standard deviation and phase corrected">
+	</div>
+
+</body>
+</html> 
